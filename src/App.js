@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import styles from './App.module.scss';
+import Home from "./containers/Home";
+import Header from './containers/Header';
+import { useState } from "react";
 
-function App() {
+const App = () => {
+  
+  const [getDarkMode, setDarkMode] = useState(false); 
+  console.log(getDarkMode);
+
+  let classes =
+  getDarkMode ? 
+  [styles.App, styles.darkApp]
+  : [styles.App];
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className={classes.join(" ")}>
+      <Header setDarkMode={setDarkMode} getDarkMode={getDarkMode}/>
+      <Home setDarkMode={setDarkMode} getDarkMode={getDarkMode}/>
     </div>
   );
 }

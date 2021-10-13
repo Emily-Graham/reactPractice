@@ -1,0 +1,25 @@
+.App {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100vh;
+  width: 100vw;
+
+  &__text {
+    color: black;
+  }
+}
+
+.darkApp {
+  background-color: hsl(0, 0%, 7%);
+
+  &__title {
+    color: white;
+  }
+
+  &__text {
+    color: white;
+  }
+}

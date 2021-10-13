@@ -1,0 +1,18 @@
+.Button {
+  display: flex;
+  align-items: center;
+  height: 35px;
+  width: 35px;
+  border: none;
+  background-color: transparent;
+  color: none;
+  border-radius: 5px;
+
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+.SearchBar {
+  display: flex;
+}
