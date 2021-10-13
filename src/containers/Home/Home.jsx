@@ -1,10 +1,10 @@
 import styles from "./Home.module.scss"
 import StudentList from './../StudentList';
 
-const Home = ({getDarkMode, setDarkMode}) => {
+const Home = () => {
   return (
     <div className={styles.Home}>
-      <StudentList setDarkMode={setDarkMode} getDarkMode={getDarkMode}/>
+      <StudentList />
     </div>
   );
 };
